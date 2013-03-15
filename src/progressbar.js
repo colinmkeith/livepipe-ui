@@ -90,8 +90,8 @@ Control.ProgressBar = Class.create({
         this.setProgress(0);
     },
     draw: function(){
-        this.progressContainer.setStyle({
-            width: (this.containerWidth - Math.floor((parseInt(this.progress, 10) / 100) * this.containerWidth)) + 'px'
+        new Effect.Morph(this.progressContainer, {
+            style: 'width:' + (this.containerWidth - Math.floor((parseInt(this.progress, 10) / 100) * this.containerWidth)) + 'px'
         });
     },
     notify: function(event_name){
